@@ -6,6 +6,10 @@ A package tool that allow you to built a python iOS apps with flet UI.
 ## How does it work ?
 It take the flet-pyodide `dist` folder then create an xcode project with briefcase iOS-python-version then load the pyodide as a localhost.
 
+## requirements
+- xcode (12>)
+- briefcase (it will be installed if you install this package)
+
 ## usage
 I am try to make it simple as possible.
 

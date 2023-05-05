@@ -7,6 +7,8 @@ It take the flet-pyodide `dist` folder then create an xcode project with briefca
 ## usage
 I am try to make it simple as possible.
 
+This is a video tutorial: [Tutorial](https://youtu.be/PC9sXtuKqPQ)
+
 1- Create a flet `dist` folder.
 
 ```

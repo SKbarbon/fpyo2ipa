@@ -4,7 +4,7 @@ from ..Tools.unzip_assets import Unzip_asset
 import os
 import shutil
 import subprocess
-
+import sys
 
 def edit_an_exist_project():
     print("Create a briefcase project..")
@@ -19,6 +19,19 @@ def edit_an_exist_project():
     
     if not os.path.isdir(f"{project_name}/src/pyo2ipadist/assets"):
         os.mkdir(f"{project_name}/src/pyo2ipadist/assets")
+    
+    if not os.path.isdir("dist"):
+        raise FileNotFoundError("There must be a flet-pyodide folder called `dist` to start.")
+    
+    print("editing the dist..")
+    if '  <base href="/basedurlhere/">' in open("dist/index.html", encoding="utf-8").read():
+        pass
+    elif '  <base href="/">' not in open("dist/index.html", encoding="utf-8").read():
+        sys.exit("Exit with Error: The base/href url of the dist must be '/'.")
+    
+    the_index_file = open("dist/index.html", encoding="utf-8").read()
+    the_index_file = str(the_index_file).replace('  <base href="/">', '  <base href="/basedurlhere/">')
+    open("dist/index.html", "w+", encoding="utf-8").write(the_index_file)
     
     print("copy the dist..")
     if os.path.isdir(f"{project_name}/src/pyo2ipadist/assets/dist"):

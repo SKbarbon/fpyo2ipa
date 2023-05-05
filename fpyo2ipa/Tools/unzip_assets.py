@@ -21,6 +21,8 @@ def Unzip_asset ():
     AppName = input("Write the name of your app: ")
     Describe = input("Write a small descibe of your app:")
     if str(AppName).replace(" ", "") == "": AppName = "fpyo2ipa"
+    if '"' in str(AppName): AppName = "fpyo2ipa"
+    if '"' in str(Describe): Describe = "fpyo2ipa"
     print("write your appname and describe..")
     read_file = open("pyo2ipadist/pyproject.toml", encoding="utf-8").read()
     read_file = str(read_file).replace("_here_the_app_name_", AppName)

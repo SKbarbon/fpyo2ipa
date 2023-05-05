@@ -1,7 +1,5 @@
 The_app_py_script = """
 
-
-
 import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
@@ -29,8 +27,9 @@ class AppNameBabe(toga.App):
         import os
         sandbox_documents_dir = os.path.expanduser('~/Documents')
         
+        if os.path.isdir(f"{sandbox_documents_dir}/dist"):
+            shutil.rmtree(f"{sandbox_documents_dir}/dist")
         shutil.copytree(dist_folder_path, f"{sandbox_documents_dir}/dist")
-        print(os.listdir(sandbox_documents_dir))
 
         the_file = open(f"{sandbox_documents_dir}/dist/index.html", encoding="utf-8").read()
         the_file = the_file.replace("/basedurlhere/", f"{sandbox_documents_dir}/dist/")
@@ -57,5 +56,6 @@ class AppNameBabe(toga.App):
 
 def main():
     return AppNameBabe()
+
 
 """

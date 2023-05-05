@@ -1,1 +1,3 @@
 include fpyo2ipa/
+include fpyo2ipa/assets/*
+include fpyo2ipa/assets/pyo2ipadist.zip

@@ -17,7 +17,7 @@ This is a video tutorial: [Tutorial](https://youtu.be/PC9sXtuKqPQ)
 
 1- Create a flet `dist` folder from your main script.
 
-* its recomended to make the `dist` from a `flet` version `0.6.2`, because this is the version that the package bieng tested with.
+* its recomended to make the `dist` from a `flet` version `0.6.2`, because this is the version the package have been tested with.
 
 ```
 flet publish main.py

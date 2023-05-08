@@ -3,6 +3,8 @@ A package tool that allow you to build a python iOS apps with flet UI.
 
 ⚠️Note: this is a macOS only package.
 
+For Android ? [fpyo2apk](https://github.com/SKbarbon/fpyo2apk)
+
 ## How does it work ?
 It take the flet-pyodide `dist` folder then create an xcode project with briefcase iOS-python-version then load the pyodide as a localhost.
 

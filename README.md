@@ -10,7 +10,7 @@ It take the flet-pyodide `dist` folder then create an xcode project with briefca
 
 ## requirements
 - xcode (12>)
-- briefcase==0.3.14 (it will be installed if you install this package)
+- briefcase==0.3.14 (it will be auto installed if you install this package).
 
 ## usage
 I am try to make it simple as possible.
